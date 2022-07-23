@@ -3,13 +3,12 @@ provider "aws" {
 }
 
 resource "aws_db_instance" "example" {
-  identifier_prefix   = var.identifier_prefix
-  allocated_storage   = var.allocated_storage
-  engine              = var.engine
-  instance_class      = var.instance_class
+  identifier_prefix   = "data-store-prod"
+  allocated_storage   = 10
+  engine              = "mysql"
+  instance_class      = "db.t2.micro"
   db_name             = var.db_name
   password            = var.db_password
-  username            = var.username
+  username            = var.db_username
   skip_final_snapshot = true
 }
-
