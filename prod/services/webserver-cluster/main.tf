@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 module "webserver-cluster" {
-  source = "../../../modules/services/webserver-cluster"
+  source = "github.com/jmik618/tf_up_and_running//services?ref=v0.0.1"
 
   cluster_name       = "webservers-prod"
   remote_bucket_name = "tf-up-and-running-state-jm"
