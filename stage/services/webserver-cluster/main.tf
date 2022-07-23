@@ -14,7 +14,7 @@ provider "aws" {
 }
 
 module "webserver-cluster" {
-  source = "github.com/jmik618/tf_up_and_running//services?ref=v0.0.1"
+  source = "github.com/jmik618/modules.git//services?ref=v0.0.1"
 
   cluster_name           = "webservers-stage"
   db_remote_state_bucket = var.db_remote_state_bucket
